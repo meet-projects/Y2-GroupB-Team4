@@ -2,29 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Signin</title>
+    <title>Signup</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css') }}">
 </head>
 <body>
     <!-- <div class="header"></div> -->
-    <form method="POST" action="/signin">
+    <form method="POST" action="/">
         <!-- Heading -->
         <h3>
-            Log in to your account
+            Create an account
         </h3>
 
         <!-- Subheading -->
-
-        
         <p >
-        *Please fill up your information below to sign in.*
+            *Please fill up your information below to sign up.*
         </p>
 
         <!-- Email -->
         <div>
             <label>Email address*</label>
             <div>
-                <input type="email"  name="email" id="emailStr" required>
+                <input type="email"  name="email" id="emailStr" required>   
             </div>
         </div>
 
@@ -32,7 +30,7 @@
         <div>
             <label>Password*</label>
             <div class="input-group">
-                <input type="password"  name="password" minlength="6">
+                <input type="password"  name="password" minlength="6" required>
             </div>
         </div>
         <p></p>
@@ -42,7 +40,8 @@
             <input type="submit"/>
         </div>
         <p></p>
-        <a href="/signup"><button type="button" >signup</button></a>
+        <a href="/signin"><button type="button">signin</button></a>
     </form>
+    <br>
 </body>
 </html>
