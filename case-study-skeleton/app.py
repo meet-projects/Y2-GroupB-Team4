@@ -30,7 +30,7 @@ def signin():
     return render_template('signin.html')
 #Code goes above here
 
-@app.route('apply')
+@app.route('/apply')
 def apply():
     return render_template('apply.html')
 
