@@ -11,7 +11,9 @@ app.config['SECRET_KEY'] = 'super-secret-key'
 def index():
     return render_template('index.html')
 
-
+@app.route('/signin')
+def signin():
+    return render_template('signin.html')
 #Code goes above here
 
 if __name__ == '__main__':
