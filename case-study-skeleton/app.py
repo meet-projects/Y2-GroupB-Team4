@@ -30,5 +30,9 @@ def signin():
     return render_template('signin.html')
 #Code goes above here
 
+@app.route('apply')
+def apply():
+    return render_template('apply.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
