@@ -25,13 +25,32 @@ app.config['SECRET_KEY'] = 'super-secret-key'
 def index():
     return render_template('index.html')
 
-@app.route('/signin')
+@app.route('/signin', methods=['GET', 'POST'])
 def signin():
-    return render_template('signin.html')
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        try:
+            login_session['user'] = auth.sign_in_with_email_and_password(email, password)
+            return redirect(url_for('index'))
+        except:
+             error = "Authentication failed"
+    return render_template("signin.html")
 
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
-    return render_template('signup.html')
+    if request.method == 'POST':
+        email = request.form['email']
+        password = request.form['password']
+        try:
+            login_session['user'] = auth.create_user_with_email_and_password(email, password)
+            UID = login_session['user']['localId']
+            user = {"email": request.form['email']}
+            db.child("Users").child(UID).set(user)
+            return redirect(url_for('index'))
+        except:
+             return "Authentication failed"
+    return render_template("signup.html")
 
 @app.route('/apply')
 def apply():
