@@ -4,6 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="apply.css">
     <title>Apply Page</title>
 </head>
 <body>
@@ -72,7 +73,64 @@
     </div>
     <div>
         <h3>Tuition and Financial Aid</h3>
-        <button aria-expanded="false">Tuition for 10th Grade</button>
+        <details>
+            <style type="text/css">
+                details {
+                  border: 1px solid;
+                  padding: 0 1rem;
+                  background: white;
+                }
+                details + details {
+                  border-top: none;
+                }
+                details[open] {
+                    padding-bottom: 1em;
+                }  
+                summary {
+                  padding: 1rem 2em 1rem 0;
+                  font-size: 1.25rem;
+                  font-weight: bold;
+                  cursor: pointer;
+                }
+
+
+                /* cascade layer: page setup. Doesn't impact the accordion */
+                @layer setupPage {
+                  
+                :root {
+                  font-size: 112.5%;
+                  line-height: 1.5;
+                }
+                body {
+                  background: #a4bacc99;
+                  color: #226daa;
+                  font-family: Raleway, sans-serif;
+                  margin: 1rem;
+                }
+                * {
+                  box-sizing: border-box;
+                }
+
+                aside {
+                  width: 38em;
+                  max-width: 98vw;
+                }
+                }
+                slot:not([name]) {
+                  display: revert;
+                }  
+            </style>
+            <summary>Tuition for 10th Grade</summary>
+            <p>The full annual tuition for non-boarding local students attending 10th grade at GHIS is 10,500₪.</p>
+            <p>The full annual tuition for boarding local students attending 10th grade at GHIS is 32,000₪.</p>
+        </details>
+        <br>
+        <details>
+            <summary>Tuition for 11th Grade</summary>
+            <p>The full annual cost for international students to attend GHIS is US$25,000. This covers tuition, extracurricular activities, room and board. Flights and internal travel, medical insurance, visa expenses, personal expenses, laundry, laptop and IB calculator are not included. In 2021, as a post-Covid incentive, we are offering all international students $5,000 in financial aid, making the maximum annual cost $20,000.</p>
+            <p>The full annual cost for local (Israeli) students including tuition, extracurricular activities, room and board is 32,000₪. This does not include travel, personal expenses, laundry, laptop and IB calculator.</p>
+            <p>If you want to attend GHIS, but are not sure if you can afford the costs, we urge you to submit an application and apply for financial aid. Limited hardship/academic excellence scholarships are available, and are considered by the scholarship committee only after a student is accepted to GHIS.</p>
+        </details>
     </div>
     <br>
         <button onclick="window.location.href='https://gh-is.org/wp-content/uploads/2021/07/FAQ.pdf'">FAQ</button>
