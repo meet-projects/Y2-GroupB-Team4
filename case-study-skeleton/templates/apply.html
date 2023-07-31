@@ -1,9 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Apply Page</title>
 </head>
 <body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="/apply">apply</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">about</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/signin">signin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <br>
+    <br>
+    <br>
     <div>
         <h3>Apply Now to Start Your Exciting Journey</h3>
         <p>Welcome and thank you for your interest in enrolling at GHIS.</p>
@@ -13,6 +39,36 @@
         <p>Please sign-in below to re-enter an existing application.</p>
         <button onclick="window.location.href='https://ghis.openapply.com/apply'">Apply Now</button>
         <a href="/signin"><button>SignIn</button></a>
+    </div>
+    <br>
+    <div>
+        <h3>Application Process</h3>
+        <p>Applications to GHIS may be submitted from October 15th until</p>
+        <p>July 1st. Please be aware that we have limited spaces and</p>
+        <p>decisions are made on a first-come, first-served basis. Therefore</p>
+        <p>early application is highly recommended.</p>
+    </div>
+    <br>
+    <div>
+        <h3>PDP - 10th Grade Candidates</h3>
+        <p>Imporatant Note: PDP class is currently open for local students only.</p>
+        <p>1. Create an account in Open Apply, save your login information and complete the online application form.</p>
+        <p>2. Upload your most recent school grade report (an English translation must be provided), a legible copy of the first two pages of your passport, and a passport-sized photo. A $30 registration fee (non-refundable) must be paid in order to process your application.</p>
+        <p>3. Candidates living in Israel will be contacted by email to attend a screening workshop on campus. The workshop will include placement tests.</p>
+        <p>4. A personal essay assignment will be sent to you via email. You should complete this assignment within a week and then upload it together with your two letters of recommendation from an academic teacher at your current school and an adult who knows you through your extra-curricular activities.</p>
+        <p>5. Candidates who passed stages 1-3, will be invited for an interview with the GHIS Director of Admissions.</p>
+        <p>6. Second interviews and/or placement tests may be required. Students are accepted on the basis of their academic achievements, English level, leadership potential, and enthusiasm.</p>
+        <p>7. Allow four weeks to receive a final decision from the school.</p>
+    </div>
+    <div>
+        <h3>PDP - 11th Grade Candidates</h3>
+        <p>1. Create an account in Open Apply, save your login information and complete the online application form.</p>
+        <p>2. Upload your most recent school grade report (an English translation must be provided), a legible copy of the first two pages of your passport, and a passport-sized photo. A $30 registration fee (non-refundable) must be paid in order to process your application.</p>
+        <p>3. You will be contacted by email to schedule a Zoom interview with the GHIS Director of Admissions. The interview will be conducted in English and take around 45 minutes.</p>
+        <p>4. A personal essay assignment will be sent to you via email. You should complete this assignment within a week and then upload it together with your two letters of recommendation from an academic teacher at your current school and an adult who knows you through your extra-curricular activities.</p>
+        <p>5. If you pass stages 2-4, you will be invited to an online screening workshop. The workshop will take 1.5 hours and will include teamwork assignments and discussions with candidates from around the world.</p>
+        <p>6. Second interviews and/or placement tests may be required. Students are accepted on the basis of their academic achievements, English level, leadership potential, and enthusiasm.</p>
+        <p>7. Allow four weeks to receive a final decision from the school.</p>
     </div>
     <br>
         <button onclick="window.location.href='https://gh-is.org/wp-content/uploads/2021/07/FAQ.pdf'">FAQ</button>
