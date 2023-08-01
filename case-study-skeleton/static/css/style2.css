@@ -16,6 +16,7 @@ form {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
+  zoom: 115%;
 }
  
 form h3 {
@@ -46,7 +47,7 @@ form input[type="password"] {
 }
  
 form input[type="submit"] {
-  background-color: #ffc800;
+  background-color: black;
   color: #fff;
   padding: 10px 20px;
   border: none;
