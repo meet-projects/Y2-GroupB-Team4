@@ -21,8 +21,21 @@ app.config['SECRET_KEY'] = 'super-secret-key'
 
 #Code goes below here
 
-@app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+        message = request.form['message']
+        try:
+            contact = {
+            "name": request.form['name'], "email": request.form['email'],
+            "phone": request.form['phone'],"message": request.form['message']
+            }
+            db.child("contacts").push(contact)
+        except:
+            return "Authentication failed"
     return render_template('index.html')
 
 @app.route('/signin', methods=['GET', 'POST'])
@@ -51,6 +64,8 @@ def signup():
         except:
              return "Authentication failed"
     return render_template("signup.html")
+
+
 
 @app.route('/apply')
 def apply():
