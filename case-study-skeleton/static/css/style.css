@@ -380,6 +380,16 @@ select:disabled {
   display: none !important;
 }
 
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Adjust this margin as needed */
+}
+
 button,
 [type=button],
 [type=reset],
