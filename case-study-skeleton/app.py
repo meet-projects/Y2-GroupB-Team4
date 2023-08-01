@@ -9,7 +9,7 @@ config = {
     "storageBucket": "personalproj-ba3c3.appspot.com",
     "messagingSenderId": "442365273351",
     "appId": "1:442365273351:web:ade388b566ce5b2ebb91a2",
-    "databaseURL": ""
+    "databaseURL": "https://y2groupproject-4ae72-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
 firebase = pyrebase.initialize_app(config)
