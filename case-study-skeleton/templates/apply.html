@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="apply.css">
+    <title>Apply Page</title>
+</head>
+<body>
+    <div>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -204,17 +214,41 @@
             .unordered-list {
               list-style-image: url('static/img/calander-icon.png');
             }
+            .unordered-list1 {
+              list-style-image: url('static/img/white.png');
+            }
         </style>
-        <div class="list">
-            <ul class="unordered-list">
-                <li class="calendar"><FONT COLOR=#007573>September 1-2, 2023</li>
-                <li class="calendar"><FONT COLOR=#007573>September 3, 2023</li>
-                <li class="calendar"><FONT COLOR=#007573>September 3, 2023</li>
-                <li class="calendar"><FONT COLOR=#007573>December 21, 2023 - January 7, 2024</li>
-                <li class="calendar"><FONT COLOR=#007573>April 18 - April 30, 2024</li>
-                <li class="calendar"><FONT COLOR=#007573>May 19th, 2024</li>
-                <li class="calendar"><FONT COLOR=#007573>June 20, 2024</li>
-            </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="list">
+                        <ul class="unordered-list">
+                            <FONT COLOR=#007573>
+                                <li class="calendar">September 1-2, 2023</li>
+                                <li class="calendar">September 3, 2023</li>
+                                <li class="calendar">September 3, 2023</li>
+                                <li class="calendar">December 21, 2023 - January 7, 2024</li>
+                                <li class="calendar">April 18 - April 30, 2024</li>
+                                <li class="calendar">May 19th, 2024</li>
+                                <li class="calendar">June 20, 2024</li>
+                            </FONT>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="unordered-list1">
+                        <FONT COLOR=#000000>
+                            <li>Orientation for international students - DP1</li>
+                            <li>Orientation for entire school</li>
+                            <li>School year begins</li>
+                            <li>Winter break</li>
+                            <li>Spring break</li>
+                            <li>DP2 graduation</li>
+                            <li>DP1 and 10th grade end of year</li>
+                        </FONT>
+                    </ul>
+              </div>
+            </div>
         </div>
     </div>
     <!-- Bootstrap core JS-->
