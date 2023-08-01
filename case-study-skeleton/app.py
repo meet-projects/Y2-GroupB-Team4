@@ -34,7 +34,7 @@ def signin():
             login_session['user'] = auth.sign_in_with_email_and_password(email, password)
             return redirect(url_for('index'))
         except:
-             error = "Authentication failed"
+             return "Authentication failed"
     return render_template("signin.html")
 
 @app.route('/signup', methods=['GET', 'POST'])
