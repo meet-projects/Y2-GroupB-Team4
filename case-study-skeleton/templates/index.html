@@ -174,7 +174,7 @@ Supporting application process, essays, and progress monitoring.</p></div>
                     </div>
                     <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                         <!-- Portfolio item 4-->
-                        <div class="Israeli Jew">
+                        <div class="portfolio-item">
                             <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
@@ -236,30 +236,32 @@ Supporting application process, essays, and progress monitoring.</p></div>
                 <!-- To make this form functional, sign up at-->
                 <!-- https://startbootstrap.com/solution/contact-forms-->
                 <!-- to get an API token!-->
+
+                <!-- FORM STARTSSSS !-->
                 <form id="contactForm" method="POST" action="/" data-sb-form-api-token="API_TOKEN">
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <!-- Name input-->
-                                <input class="form-control" name="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                <input class="form-control" name="name" type="text" placeholder="Your Name *" data-sb-validations="required" required/>
+                                <div class="invalid-feedback" data-sb-feedback="name:required" required>A name is required.</div>
                             </div>
                             <div class="form-group">
                                 <!-- Email address input-->
-                                <input class="form-control" name="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <input class="form-control" name="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" required/>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <div class="form-group mb-md-0">
                                 <!-- Phone number input-->
-                                <input class="form-control" name="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
+                                <input class="form-control" name="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" required/>
                                 <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 <!-- Message input-->
-                                <textarea class="form-control" name="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" name="message" placeholder="Your Message *" data-sb-validations="required" required></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
@@ -281,9 +283,14 @@ Supporting application process, essays, and progress monitoring.</p></div>
                     <!-- an error submitting the form-->
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     <!-- Submit Button-->
-                    
-                    <div class="text-center"><input type="submit" class="btn btn-primary btn-xl text-uppercase"  value="send message"></div>
-                </form>
+                    <div class="box" style="text-align: center">
+
+    <button type="submit" id="myButton" class="btn btn-primary btn-xl text-uppercase">send message</button>
+</div>
+
+
+
+
             </div>
         </section>
         <!-- Footer-->
@@ -392,7 +399,7 @@ Supporting application process, essays, and progress monitoring.</p></div>
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Jhonathan</h2>
+                                    <h2 class="text-uppercase">Jonathan</h2>
                                     <p class="item-intro text-muted">Israeli Jew</p>
                                     <img class="img-fluid d-block mx-auto" src="{{url_for('static',filename='pics//lum4.png')}}" alt="..." width="300px" />
                                     <p>Jonathan, from Germany and Israel, said that while he grew up in both places, he didn’t feel that he belonged in either. At GHIS, he could connect to people who felt like him–between worlds–and that gave him a sense of belonging.</p>

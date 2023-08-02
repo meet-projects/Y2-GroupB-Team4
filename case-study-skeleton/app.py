@@ -24,19 +24,22 @@ app.config['SECRET_KEY'] = 'super-secret-key'
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        phone = request.form['phone']
-        message = request.form['message']
         try:
             contact = {
             "name": request.form['name'], "email": request.form['email'],
             "phone": request.form['phone'],"message": request.form['message']
             }
-            db.child("contacts").push(contact)
-        except:
+            db.child("Users").child("contacts").set(contact)
+            return redirect(url_for('thank_you'))
+        except Exception as e:
+            print("INDEX ERROR", e)
             return "Authentication failed"
     return render_template('index.html')
+
+@app.route('/thank_you', methods=['GET', 'POST'])
+def thank_you():
+    name = db.child("Users").child("contacts").get().val()['name']
+    return render_template('thank_you.html', name=name)
 
 @app.route('/signin', methods=['GET', 'POST'])
 def signin():
@@ -61,8 +64,9 @@ def signup():
             user = {"email": request.form['email']}
             db.child("Users").child(UID).set(user)
             return redirect(url_for('index'))
-        except:
-             return "Authentication failed"
+        except Exception as e:
+            print("Sign UP:", e)
+            return "Authentication failed"
     return render_template("signup.html")
 
 
