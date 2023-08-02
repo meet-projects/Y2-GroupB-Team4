@@ -7,29 +7,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="apply.css">
     <title>Apply Page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-    <div>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>GHIS</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
         <style>
             body {
-                font-family: 'Raleway', sans-serif;
-                background-color:white;
-                color: #226daa;
                 margin: 1rem;
             }
 
@@ -63,12 +56,21 @@
             }
 
             button {
-                background-color: #007573;
+                background-color: #5c5c5c;
                 color: #fff;
                 padding: 10px 20px;
                 border: none;
                 border-radius: 4px;
                 cursor: pointer;
+            }
+
+            .center {
+              margin: 0;
+              position: absolute;
+              left: 30%;
+              top: 16%;
+              -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
             }
     </style>
     </head>
@@ -89,72 +91,63 @@
                 </div>
             </div>
         </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div>
-        <h3>Apply Now to Start Your Exciting Journey</h3>
-        <p>Welcome and thank you for your interest in enrolling at GHIS.</p>
-        <p>Below you will find information about the screening and application processes.</p>
-        <p>There are two entry grades for GHIS: 10th grade for local students and 11th grade for both local and international students.</p>
-        <p>To begin the application proccess, please click below.</p>
-        <p>Please sign-in below to re-enter an existing application.</p>
-        <button onclick="window.location.href='https://ghis.openapply.com/apply'">Apply Now</button>
-        <a href="/signin"><button>SignIn</button></a>
+    <div class="page-section" style="display: flex;">
+        <h2 class="section-heading text-uppercase" class="row-cols-md-2" >Apply Now to Start Your Exciting Journey</h2>
+        <p class="text-muted">Welcome and thank you for your interest in enrolling at GHIS. Below you will find information about the screening and application processes. There are two entry grades for GHIS: 10th grade for local students and 11th grade for both local and international students. To begin the application proccess, please click below. Please sign-in below to re-enter an existing application.</p>
+        <div class="center">
+            <button onclick="window.location.href='https://ghis.openapply.com/apply'">Apply Now</button>
+            <a href="/signin"><button>SignIn</button></a>
+        </div>
     </div>
-    <br>
-    <div>
-        <h3>Application Process</h3>
+    <div class="page-section">
+        <h3 >Application Process</h3>
         <p>Applications to GHIS may be submitted from October 15th until</p>
         <p>July 1st. Please be aware that we have limited spaces and</p>
         <p>decisions are made on a first-come, first-served basis. Therefore</p>
         <p>early application is highly recommended.</p>
-    </div>
-    <br>
-    <style>
-        body {font-family: Arial;}
+        <br>
+        <style>
+            /* Style the tab */
+            .tab {
+              overflow: hidden;
+              border: 1px solid #ccc;
+              background-color: #f0f0f0;
+            }
 
-        /* Style the tab */
-        .tab {
-          overflow: hidden;
-          border: 1px solid #ccc;
-          background-color: #f0f0f0;
-        }
+            /* Style the buttons inside the tab */
+            .tab button {
+              background-color: #5c5c5c;
+              float: left;
+              border: none;
+              outline: none;
+              cursor: pointer;
+              padding: 14px 16px;
+              transition: 0.3s;
+              font-size: 17px;
+            }
 
-        /* Style the buttons inside the tab */
-        .tab button {
-          background-color: #007573;
-          float: left;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          padding: 14px 16px;
-          transition: 0.3s;
-          font-size: 17px;
-        }
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+              background-color: #ddd;
+            }
 
-        /* Change background color of buttons on hover */
-        .tab button:hover {
-          background-color: #ddd;
-        }
+            /* Create an active/current tablink class */
+            .tab button.active {
+              background-color: #ccc;
+            }
 
-        /* Create an active/current tablink class */
-        .tab button.active {
-          background-color: #ccc;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-          display: none;
-          padding: 6px 12px;
-          border: 1px solid #ccc;
-          border-top: none;
-        }
-    </style>
-        <div class="tab">
-            <button class="tablinks" onclick="openCity(event, 'PDP - 10th Grade Candidates')">PDP - 10th Grade Candidates</button>
-            <button class="tablinks" onclick="openCity(event, 'PDP - 11th Grade Candidates')">PDP - 11th Grade Candidates</button>
+            /* Style the tab content */
+            .tabcontent {
+              display: none;
+              padding: 6px 12px;
+              border: 1px solid #ccc;
+              border-top: none;
+            }
+        </style>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'PDP - 10th Grade Candidates')">PDP - 10th Grade Candidates</button>
+                <button class="tablinks" onclick="openCity(event, 'PDP - 11th Grade Candidates')">PDP - 11th Grade Candidates</button>
+            </div>
         </div>
         <div id="PDP - 10th Grade Candidates" class="tabcontent">
             <h3>PDP - 10th Grade Candidates</h3>
@@ -221,13 +214,7 @@
                 :root {
                   font-size: 112.5%;
                   line-height: 1.5;
-                }
-                body {
-                  background: #a4bacc99;
-                  color: #226daa;
-                  font-family: Raleway, sans-serif;
-                  margin: 1rem;
-                }
+                }               
                 * {
                   box-sizing: border-box;
                 }
